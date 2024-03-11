@@ -1,0 +1,351 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background: black;
+}
+
+nav {
+    background: hwb(180 2% 0%);
+    padding: 2em 2em 0 2em;
+}
+
+img {
+    opacity: 1;
+}
+
+.fa-brands {
+    color: #00aced; /* Replace with your desired color */
+}
+
+.navbar {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1218px;
+    margin: auto;
+}
+
+.socials a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.socials a i.fa-brands,
+.socials a i.fas {
+    font-size: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.socials a i.fas {
+    margin-left: 8px;
+}
+
+.socials a i.fa-brands:hover,
+.socials a i.fas:hover {
+    transform: scale(1.2);
+}
+
+#coingecko {
+    margin-bottom: -5px;
+}
+
+.socials a:nth-child(1) {
+    margin-right: 8px;
+}
+
+.socials a:nth-child(2) {
+    margin-right: 6px;
+}
+
+.navbar img {
+    width: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar img:hover {
+    transform: scale(1.2);
+}
+
+.hero {
+    background: hwb(180 2% 0%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .title {
+    background: hwb(180 2% 0%);
+    margin: 2em auto 1em auto;
+    padding: 1em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.hero .title h1 {
+    font-size: 4em;
+}
+
+.hero .title h2 {
+    font-weight: normal;
+}
+
+.hero .title img {
+    width: 90%;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.hero button {
+    background: black;
+    color: white;
+    font-size: 1.8em;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.hero button a {
+    color: transparent;
+    background-image: linear-gradient(to right, #a18cd1, #18f494);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero button:hover {
+    background: white;
+}
+
+/* #logoContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 1em;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    transform: translateY(-20px);
+} */
+
+.hero img {
+    max-width: 647px;
+}
+
+.hero-under-img{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.hero .slider {
+    height: 50px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: black;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero .slider .slide-track {
+    display: flex;
+    width: calc(200px * 56);
+    animation: scroll 60s linear infinite;
+}
+
+.hero .slider .slide {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: lightseagreen;
+}
+
+.hero .slider::before,
+.hero .slider::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 5%;
+    z-index: 2;
+}
+
+.hero .slider::before {
+    left: 0;
+    top: 0;
+}
+
+.hero .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 56));
+    }
+}
+
+.game {
+    background: #5dd4e6;
+    padding: 3em 2em 3em 2em;
+    text-align: center;
+}
+
+.game .container {
+    max-width: 1218px;
+    margin: auto;
+}
+
+.game .container h1 {
+    font-size: 3em;
+}
+
+.game .container h1 span {
+    font-size: 0.5em;
+}
+
+.game .container .elements {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.game .container img {
+    width: 40%;
+    border-radius: 15px;
+}
+
+.game .container .nonImages {
+    width: 45%;
+    padding: 1em;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game .container .nonImages h2 {
+    margin-bottom: 1em;
+}
+
+.game .container .nonImages button {
+    background: black;
+    font-size: 1.8em;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.game .container .nonImages button a {
+    text-decoration: none;
+    color: #5cb85c;
+    transition: 0.3s ease-in-out;
+}
+
+.game .container .nonImages button a:hover {
+    color: white;
+}
+
+@media only screen and (max-width: 940px) {
+    .game .container .elements {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game .container img {
+        width: 80%;
+        min-width: 276px;
+    }
+
+    .game .container .nonImages {
+        width: 80%;
+        min-width: 276px;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    .game .container h1 {
+        font-size: 2em;
+    }
+
+    .game .container .nonImages h2 {
+        font-size: 1.2em;
+    }
+
+    .game .container .nonImages button {
+        font-size: 1.6em;
+    }
+}
+
+.tokenomics {
+    background: hwb(180 2% 0%);
+    padding: 3em 2em 0 2em;
+    text-align: center;
+}
+
+.tokenomics h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+.tokenomics img {
+    max-width: 500px;
+    width: 80%;
+    margin-bottom: -6px;
+}
+
+.tokenomics ul {
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.tokenomics ul li {
+    list-style: none;
+}
+
+.copyrights {
+    background: hwb(180 2% 0%);
+    color:black;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+@media only screen and (max-width: 417px) {
+    .tokenomics h1 {
+        font-size: 2em;
+    }
+
+    .tokenomics ul {
+        font-size: 1em;
+    }
+
+    .hero-under-img {
+        width: 90%;
+        margin: auto;
+        margin-top: 3em;
+    }
+}
